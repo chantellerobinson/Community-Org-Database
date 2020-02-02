@@ -7,7 +7,9 @@ CREATE TABLE community_orgs (
     community_org_name VARCHAR(40) UNIQUE NOT NULL,
     telephone VARCHAR(15),
     email VARCHAR(50) UNIQUE,
-    address
+    address VARCHAR(70),
+    longitude DECIMAL,
+    latitude DECIMAL
 );
 
 DROP TABLE IF EXISTS categories;
