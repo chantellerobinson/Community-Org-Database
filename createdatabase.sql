@@ -25,8 +25,7 @@ CREATE TABLE `community_org_categories` (
     categories_id INT NOT NULL,
         FOREIGN KEY(community_orgs_id) REFERENCES community_orgs(id)
         ON UPDATE CASCADE
-        ON DELETE CASCADE, 
-    CONSTRAINT `categories_constraint` 
+        ON DELETE CASCADE,  
         FOREIGN KEY(categories_id) REFERENCES categories(id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
