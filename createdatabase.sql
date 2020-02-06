@@ -23,11 +23,9 @@ CREATE TABLE `community_org_categories` (
     id INT PRIMARY KEY AUTO_INCREMENT,
     community_orgs_id  INT NOT NULL,
     categories_id INT NOT NULL,
-    CONSTRAINT `community_org_constraint` 
         FOREIGN KEY(community_orgs_id) REFERENCES community_orgs(id)
         ON UPDATE CASCADE
-        ON DELETE CASCADE, 
-    CONSTRAINT `categories_constraint` 
+        ON DELETE CASCADE,  
         FOREIGN KEY(categories_id) REFERENCES categories(id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
