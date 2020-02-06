@@ -22,11 +22,11 @@ DROP TABLE IF EXISTS `community_org_categories`;
 CREATE TABLE `community_org_categories` (
     id INT PRIMARY KEY AUTO_INCREMENT,
     CONSTRAINT `community_org_constraint` 
-        FOREIGN KEY(community_orgs_id) REFERENCES community_orgs(id)
+        FOREIGN KEY(`community_orgs_id`) REFERENCES community_orgs(id)
         ON UPDATE CASCADE
         ON DELETE CASCADE, 
     CONSTRAINT `categories_constraint` 
-        FOREIGN KEY(categories_id) REFERENCES categories(id)
+        FOREIGN KEY(`categories_id`) REFERENCES categories(id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
